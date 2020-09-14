@@ -27,9 +27,9 @@ class VideoList extends StatelessWidget {
                   color: Colors.white,
                   image: DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage(imageUrl),
+                    image: AssetImage(imageUrl, ),
                   ),
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(8),
                 ),
               ),
             ),

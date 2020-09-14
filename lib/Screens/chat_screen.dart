@@ -1,6 +1,5 @@
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:purple_room/models/chat_model.dart';
 
 import 'messages.dart';

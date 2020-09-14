@@ -25,24 +25,28 @@ class _StoreState extends State<Store> {
       backgroundColor: Color(0xFF21012B),
       body: Column(children: [
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(5.0),
           child:
-              Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
+              SingleChildScrollView(
+                              child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center, 
+                  children: [
             Container(
-                height: 100,
-                width: 50,
-                decoration: BoxDecoration(color: Colors.grey)),
+                  height: 80,
+                  width: 50,
+                  decoration: BoxDecoration(color: Colors.grey)),
             SizedBox(width: 10),
             Container(
-                height: 150,
-                width: 220,
-                decoration: BoxDecoration(color: Colors.grey)),
+                  height: 110,
+                  width: 220,
+                  decoration: BoxDecoration(color: Colors.grey)),
             SizedBox(width: 10),
             Container(
-                height: 100,
-                width: 50,
-                decoration: BoxDecoration(color: Colors.grey)),
+                  height: 80,
+                  width: 50,
+                  decoration: BoxDecoration(color: Colors.grey)),
           ]),
+              ),
         ),
         Padding(
           padding: const EdgeInsets.all(10.0),
@@ -70,6 +74,7 @@ class _StoreState extends State<Store> {
                     ),
                   );
                 })),
+                // SizedBox(height:5),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -77,7 +82,10 @@ class _StoreState extends State<Store> {
                     Text("see all", style: TextStyle(color: Colors.white),)
                   ],
                 ),
-           Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
+                // SizedBox(height: 2,),
+           Row(
+             crossAxisAlignment: CrossAxisAlignment.center, 
+           children: [
             Expanded(
                           child: Container(
                   height: 50,

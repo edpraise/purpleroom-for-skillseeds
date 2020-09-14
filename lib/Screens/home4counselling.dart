@@ -74,7 +74,7 @@ class _CounselHomeState extends State<CounselHome> {
                   text: 'feed',
                 ),
                 Tab(
-                  text: 'story',
+                  text: 'store',
                 )
               ]),
             ),
@@ -91,36 +91,3 @@ class _CounselHomeState extends State<CounselHome> {
     );
   }
 }
-
-// Column(
-//             children: [
-//               Row(
-//                 children: [
-//                   Column(
-//                     children: [
-//                       Container(
-
-//                       ),
-//                       SizedBox(height: 10),
-//                       Text(
-//                         "Hello Geralt!",
-//                         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
-//                       ),
-//                       Text(
-//                         "lets explore whats happening today",
-//                         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
-//                       )
-//                     ],
-//                   ),
-//                   CircularProfileAvatar(
-//                     '',
-//                     child: Image.asset('assets/images/bls.jpg'),
-//                     borderColor: Color(0xFFFF8F00),
-//                     borderWidth: 2,
-//                     elevation: 2,
-//                     radius: 20,
-//                   ),
-//                 ],
-//               ),
-//             ],
-//           ),

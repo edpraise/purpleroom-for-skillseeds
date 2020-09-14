@@ -2,6 +2,8 @@ import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:purple_room/features/authentication/presentation/widgets/appbar_actions.dart';
 
+import 'cp_counsellorPro.dart';
+
 class Cprofile extends StatefulWidget {
   @override
   _CprofileState createState() => _CprofileState();
@@ -55,7 +57,10 @@ class _CprofileState extends State<Cprofile> {
                             color: Color(0xFFFF8F00),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)),
-                            onPressed: () {},
+                            onPressed: () {
+                               Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => CpCounsellorProfileInfo()));
+                            },
                             child: new Text('Apply'))
                       ],
                     ),
