@@ -8,10 +8,13 @@ class FeedScreen extends StatefulWidget {
 
 class _FeedScreenState extends State<FeedScreen> {
    List<Map<String, dynamic>> categoryList = [
-    {"icon": Icons.mic_none, "categoryName": "add"},
-    {"icon": Icons.healing, "categoryName": "health"},
-    {"icon": Icons.card_membership, "categoryName": "medicine"},
-    {"icon": Icons.card_membership, "categoryName": "medde"}
+    {"imageUrl": 'assets/images/bls.jpg', "categoryName": "add"},
+    {"imageUrl": 'assets/images/bls.jpg', "categoryName": "health"},
+    {"imageUrl": 'assets/images/bls.jpg', "categoryName": "medicine"},
+    {"imageUrl": 'assets/images/bls.jpg', "categoryName": "family"},
+    {"imageUrl": 'assets/images/bls.jpg', "categoryName": "music"},
+    {"imageUrl": 'assets/images/bls.jpg', "categoryName": "culture"},
+    {"imageUrl": 'assets/images/bls.jpg', "categoryName": "politics"},
   ];
   @override
   Widget build(BuildContext context) {
@@ -42,7 +45,7 @@ class _FeedScreenState extends State<FeedScreen> {
                   itemCount: categoryList.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
-                    return categoryTile(categoryList[index]['icon'],
+                    return categoryTile(categoryList[index]['imageUrl'],
                         categoryList[index]['categoryName']);
                   },
                 ),
@@ -60,7 +63,7 @@ class _FeedScreenState extends State<FeedScreen> {
         ));
   }
 
-  Widget categoryTile(IconData icon, String categoryName) {
+  Widget categoryTile(String imageurl, String categoryName) {
     return Column(
       children: [
         CircularProfileAvatar(
@@ -69,13 +72,13 @@ class _FeedScreenState extends State<FeedScreen> {
           borderColor: Color(0xFFFF8F00),
           borderWidth: 2,
           elevation: 5,
-          radius: 40,
+          radius: 25,
         ),
         SizedBox(height: 5),
         Row(
           
           children: [
-            Text("Add", style: TextStyle(color: Colors.white,),),
+            Text(categoryName, style: TextStyle(color: Colors.white,),),
           ],
         )
         // Container(child: Text([Text(categoryName)]))

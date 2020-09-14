@@ -1,5 +1,6 @@
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
+import 'package:purple_room/Screens/wallet.dart';
 
 class ProfileScreen extends StatefulWidget {
   @override
@@ -49,6 +50,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
       color: Colors.white,
     ),
      ListTile(
+       onTap: (){
+         Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => PersonalWallet()));
+       },
       leading: Icon(Icons.account_balance_wallet, color: Colors.white),
       title: Text('Wallet', style: TextStyle(color:Colors.white, fontSize: 15)),
       trailing: Text("N5,500", style: TextStyle(fontSize: 15, color: Colors.white,)),

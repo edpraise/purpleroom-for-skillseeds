@@ -5,6 +5,7 @@ class Review {
   final String reviewMessage;
   final String messagetime;
   final ReviewerPic reviewerPic;
+
   Review(
       {this.reviewerName,
       this.reviewMessage,
@@ -25,6 +26,7 @@ class Review {
       reviewMessage: 'khcihfiuahicinehfoascvbubviaschiwfh',
       reviewerName: 'mrs ken',
       messagetime: '1pm',
+      
     ), Review(
       reviewMessage: 'khcihfiuahicinehfoascvbubviaschiwfh',
       reviewerName: 'ed',

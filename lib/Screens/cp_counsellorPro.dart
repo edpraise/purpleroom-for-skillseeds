@@ -20,84 +20,85 @@ class _CpCounsellorProfileInfoState extends State<CpCounsellorProfileInfo> {
           appBar: AppBar(
             // leading: Offstage(),
             backgroundColor: Color(0xFF21012B),
-            title: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  CircularProfileAvatar(
-                    '',
-                    child: Image.asset('assets/images/bls.jpg'),
-                    borderColor: Color(0xFFFF8F00),
-                    borderWidth: 2,
-                    elevation: 2,
-                    radius: 20,
-                  ),
-                  Column(
-                    children: [
-                      Text("Tasun Prasad",
-                          style: TextStyle(color: Colors.white, fontSize: 10)),
-                      Text("Relationship",
-                          style: TextStyle(color: Colors.orange, fontSize: 8)),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.star,
-                            color: Colors.orangeAccent,
-                            size: 12,
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.orangeAccent,
-                            size: 12,
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.orangeAccent,
-                            size: 12,
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.orangeAccent,
-                            size: 12,
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.white,
-                            size: 12,
-                          ),
-                        ],
-                      ),
-                      Container(
-                          height: 20,
-                          width: 80,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Colors.orange,
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(4.0),
-                            child: Text(
-                              
-                              "Book Now",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.bold,
-                                  
-                                  ),
+            title: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    CircularProfileAvatar(
+                      '',
+                      child: Image.asset('assets/images/bls.jpg'),
+                      borderColor: Color(0xFFFF8F00),
+                      borderWidth: 2,
+                      elevation: 2,
+                      radius: 20,
+                    ),
+                    Column(
+                      children: [
+                        Text("Tasun Prasad",
+                            style: TextStyle(color: Colors.white, fontSize: 10)),
+                        Text("Relationship",
+                            style: TextStyle(color: Colors.orange, fontSize: 8)),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.star,
+                              color: Colors.orangeAccent,
+                              size: 12,
                             ),
-                          ))
-                    ],
-                  ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.orangeAccent,
+                              size: 12,
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.orangeAccent,
+                              size: 12,
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.orangeAccent,
+                              size: 12,
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.white,
+                              size: 12,
+                            ),
+                          ],
+                        ),
+                        Container(
+                            height: 20,
+                            width: 80,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.orange,
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Text(
+                                
+                                "Book Now",
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                    
+                                    ),
+                              ),
+                            ))
+                      ],
+                    ),
 
-                ],
-              ),
+                  ],
+                ),
+              ],
             ),
             bottom: PreferredSize(
               
               // preferredSize: Size.fromHeight(250),
-               preferredSize: Size(double.infinity, 214),
+               preferredSize: Size(double.infinity, 164),
               child: TabBar(tabs: [
                 Tab(
                   text: 'Infomation',
