@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:purple_room/features/authentication/presentation/pages/login.dart';
 import 'package:purple_room/features/authentication/presentation/widgets/custom_widgets.dart';
 
 class Registar extends StatefulWidget {
@@ -69,26 +70,31 @@ class _RegistarState extends State<Registar> {
                       child: Column(
                         children: [
                           CustomInput(
+                            obscureText: false,
                               validator: (value) {},
                               controller: _firstNameController,
                               label: "FIRST NAME",
                               hint: "First name here"),
                           CustomInput(
+                              obscureText: false,
                               validator: (value) {},
                               controller: _firstNameController,
                               label: "LAST NAME",
                               hint: "Last name here"),
                           CustomInput(
+                            obscureText: false,
                               validator: (value) {},
                               controller: _firstNameController,
                               label: "EMAIL",
                               hint: "Email here"),
                           CustomInput(
+                            obscureText: true,
                               validator: (value) {},
                               controller: _firstNameController,
                               label: "PASSWORD",
                               hint: "password here"),
                           CustomInput(
+                            obscureText: true,
                               validator: (value) {},
                               controller: _firstNameController,
                               label: "CONFIRM PASSWORD",
@@ -100,7 +106,10 @@ class _RegistarState extends State<Registar> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)
                             ),
-                              onPressed: () {}, child: new Text('REGISTER'))
+                              onPressed: () {
+                                 Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => LoginPage()));
+                              }, child: new Text('REGISTER'))
                         ],
                       ),
                     ),

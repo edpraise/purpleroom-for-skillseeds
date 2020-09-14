@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:purple_room/Screens/cart_screen.dart';
 import 'package:purple_room/Screens/chat_screen.dart';
 import 'package:purple_room/Screens/gift_ebook.dart';
+import 'package:purple_room/Screens/home4counselling.dart';
 import 'package:purple_room/Screens/landing_home_screen.dart';
 import 'package:purple_room/Screens/profile_screen.dart';
 
@@ -16,7 +17,7 @@ class _MainScreenHolderState extends State<MainScreenHolder> {
   List<Widget> screens;
   Widget currentPage;
 
-  HomeScreen homeScreen;
+  CounselHome homeCounselScreen;
   CartScreen cartScreen;
   ChatScreen chatScreen;
   GiftBook giftBook;
@@ -25,20 +26,20 @@ class _MainScreenHolderState extends State<MainScreenHolder> {
   @override
   void initState() {
     super.initState();
-    homeScreen = HomeScreen();
+    homeCounselScreen = CounselHome();
     cartScreen = CartScreen();
     chatScreen = ChatScreen();
     giftBook = GiftBook();
     profileScreen = ProfileScreen();
 
     screens = [
-      homeScreen,
+      homeCounselScreen,
       chatScreen,
       cartScreen,
       giftBook,
       profileScreen,
     ];
-    currentPage = homeScreen;
+    currentPage = homeCounselScreen;
   }
 
   @override

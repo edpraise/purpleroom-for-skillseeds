@@ -48,6 +48,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
     Divider(
       color: Colors.white,
     ),
+     ListTile(
+      leading: Icon(Icons.account_balance_wallet, color: Colors.white),
+      title: Text('Wallet', style: TextStyle(color:Colors.white, fontSize: 15)),
+      trailing: Text("N5,500", style: TextStyle(fontSize: 15, color: Colors.white,)),
+    ),
+     Divider(
+      color: Colors.white,
+    ),
     ListTile(
       leading: Icon(Icons.notifications, color: Colors.white), 
       title: Text('Notifications',style: TextStyle(color:Colors.white, fontSize: 15)),

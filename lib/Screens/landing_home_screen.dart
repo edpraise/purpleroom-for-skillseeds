@@ -109,26 +109,36 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SizedBox(height: 30),
                 Container(
-                  height: MediaQuery.of(context).size.height,
-                  child: GridView.count(
-                    crossAxisCount: 3,
-                    children: List.generate(9, (index) {
-                      return Column(children: [
-                        CircularProfileAvatar(
-                          '',
-                          child: Image.asset('assets/images/bls.jpg'),
-                          borderColor: Color(0xFFFF8F00),
-                          borderWidth: 2,
-                          elevation: 5,
-                          radius: 30,
-                        ),
-                        Text("${topicList[index]['title']}",
-                            style: TextStyle(color: Colors.white)),
-                      ]);
-                    }),
+                    height: MediaQuery.of(context).size.height/2,
+                   
+                    child: GridView.count(
+                      crossAxisCount: 3,
+                      children: List.generate(9, (index) {
+                        return Column(children: [
+                          CircularProfileAvatar(
+                            '',
+                            child: Image.asset('assets/images/bls.jpg'),
+                            borderColor: Color(0xFFFF8F00),
+                            borderWidth: 2,
+                            elevation: 5,
+                            radius: 30,
+                          ),
+                          Text("${topicList[index]['title']}",
+                              style: TextStyle(color: Colors.white)),
+                        ]);
+                      }),
+                    ),
                   ),
-                ),
-                Text("submit", style: TextStyle(color: Colors.white)),
+                SizedBox(height: 10,),
+                Text("More Topics", style: TextStyle(color: Colors.orangeAccent, decoration: TextDecoration.underline,)),
+                SizedBox(height: 10,),
+                new FlatButton(
+                            padding: EdgeInsets.symmetric(horizontal: 125),
+                            color: Color(0xFFFF8F00),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)
+                            ),
+                              onPressed: () {}, child: new Text('Apply'))
               ],
             ),
           ),

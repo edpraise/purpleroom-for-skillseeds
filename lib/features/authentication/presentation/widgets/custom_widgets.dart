@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:purple_room/features/authentication/presentation/pages/forgot_password.dart';
 
 class CustomInput extends StatelessWidget {
+  final bool obscureText;
   final String label;
   final String hint;
   final TextEditingController controller;
@@ -12,6 +14,7 @@ class CustomInput extends StatelessWidget {
     this.hint,
     this.controller,
     this.validator,
+    this.obscureText,
   }) : super(key: key);
 
   @override
@@ -21,16 +24,28 @@ class CustomInput extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Text(label,
-              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 10),
-              textAlign: TextAlign.start, ),
+          child: Text(
+            label,
+            style: TextStyle(
+                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 10),
+            textAlign: TextAlign.start,
+          ),
         ),
         Padding(
           padding: const EdgeInsets.all(4.0),
           child: TextFormField(
+            
             controller: controller,
             validator: validator,
+            obscureText: obscureText? obscureText: false,
             decoration: InputDecoration(
+              suffix: GestureDetector(
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => ForgotPassword()));
+                },
+                child: Text("Forgot?", style: TextStyle(color:Colors.white,))), 
+             
               isDense: true,
               hintText: hint,
               hintStyle: TextStyle(color: Colors.white, fontSize: 12),
@@ -41,12 +56,7 @@ class CustomInput extends StatelessWidget {
               ),
               filled: true,
               fillColor: Color(0xFF410255),
-
-              
-
-
             ),
-          
           ),
         ),
       ],

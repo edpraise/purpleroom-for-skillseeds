@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:purple_room/features/authentication/presentation/widgets/appbar_actions.dart';
 import 'package:purple_room/features/authentication/presentation/widgets/cart_widget.dart';
 import 'package:purple_room/features/authentication/presentation/widgets/search_bar_widget.dart';
-// import 'package:purple_room/features/authentication/presentation/widgets/search_bar_widget.dart';
+
 
 class GiftBook extends StatefulWidget {
   @override
@@ -50,16 +51,7 @@ class _GiftBookState extends State<GiftBook> {
             "Ebooks",
           ),
           actions: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  Icon(Icons.notifications),
-                  SizedBox(width: 10),
-                  Icon(Icons.apps),
-                ],
-              ),
-            )
+            AppBarActions()
           ],
         ),
         body: Column(
@@ -91,3 +83,5 @@ class _GiftBookState extends State<GiftBook> {
         ));
   }
 }
+
+

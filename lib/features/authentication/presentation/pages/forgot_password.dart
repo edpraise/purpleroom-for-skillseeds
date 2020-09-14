@@ -115,6 +115,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: CustomInput(
+                  obscureText: false,
                     validator: (value) {},
                     controller: _emailController,
                     label: "EMAIL",

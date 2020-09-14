@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:purple_room/features/authentication/presentation/widgets/bottom_navigation%20_mainScreen.dart';
+// import 'package:purple_room/Screens/counsellor_profile.dart';
+// import 'package:purple_room/Screens/home4counselling.dart';
+import 'package:purple_room/features/authentication/presentation/pages/login.dart';
+// import 'package:purple_room/features/authentication/presentation/widgets/bottom_navigation%20_mainScreen.dart';
 // import 'package:purple_room/Screens/login.dart';
 // import 'package:purple_room/features/authentication/presentation/pages/registar.dart';
 
@@ -20,7 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MainScreenHolder(),
+      home: LoginPage(),
     );
   }
 }
