@@ -60,7 +60,11 @@ flutter:
     - assets/images/hb.jpg
     - assets/images/ju.jpg
     - assets/images/homeback.jpg
+    - assets/images/doc.jpg
+    - assets/images/hea.jpg
+    - assets/images/fa.jpg
     - assets/images/x.png
+    - assets/images/l.jpg
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
