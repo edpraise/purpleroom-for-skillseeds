@@ -3,6 +3,7 @@ import 'package:awesome_card/extra/card_type.dart';
 import 'package:awesome_card/style/card_background.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
+import 'package:purple_room/Screens/wallets%20activities/cart_confirmation.dart';
 
 class CartScreen extends StatefulWidget {
   @override
@@ -10,6 +11,31 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
+  String cardNumber = "";
+  String cardHolderName = "";
+  String expiryDate = "";
+  String cvv = "";
+  bool showBack = false;
+
+  FocusNode _focusNode;
+
+  @override
+  void initState() {
+    super.initState();
+    _focusNode = new FocusNode();
+    _focusNode.addListener(() {
+      setState(() {
+        _focusNode.hasFocus ? showBack = true : showBack = false;
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _focusNode.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +66,7 @@ class _CartScreenState extends State<CartScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Wallet",
+                    "CheckOut",
                     style: TextStyle(color: Colors.white),
                   ),
                   CircularProfileAvatar(
@@ -266,7 +292,12 @@ class _CartScreenState extends State<CartScreen> {
                           color: Colors.orange,
                         ),
                       ),
-                      child: Center(child: Text("Pay")),
+                      child: Center(child: GestureDetector(
+                        onTap: (){
+                          Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => WalletConfirmation()));
+                        },
+                        child: Text("Pay"))),
                     ),
                   ),
                 ],
@@ -283,18 +314,184 @@ class _CartScreenState extends State<CartScreen> {
         context: context,
         builder: (BuildContext c) {
           return Container(
-            child: CreditCard(
-    cardNumber: "5450 7879 4864 7854",
-    cardExpiry: "10/25",
-    cardHolderName: "Card Holder",
-    cvv: "456",
-    bankName: "Axis Bank",
-    cardType: CardType.masterCard, // Optional if you want to override Card Type
-    showBackSide: false,
-    frontBackground: CardBackgrounds.black,
-    backBackground: CardBackgrounds.white,
-    showShadow: true,
-),
+            height: 300,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(30), topLeft: Radius.circular(30)),
+            ),
+            child: Column(
+              children: [
+                CreditCard(
+                  cardNumber: "5450 7879 4864 7854",
+                  cardExpiry: "10/25",
+                  cardHolderName: "Card Holder",
+                  cvv: "456",
+                  bankName: "GT Bank",
+                  cardType: CardType
+                      .masterCard, // Optional if you want to override Card Type
+                  showBackSide: false,
+                  frontBackground: CardBackgrounds.black,
+                  backBackground: CardBackgrounds.white,
+                  showShadow: false,
+                ),
+                SizedBox(height: 30),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                            height: 35,
+                            width: 35,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.orange,
+                            )),
+                        GestureDetector(
+                          onTap: () {
+                            bottomSheet(context);
+                          },
+                          child: Text("Use new card",
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        SizedBox(width: 150),
+                        Container(
+                          height: 20,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.orange,
+                          ),
+                          child: GestureDetector(
+                            onTap: () {
+                              bottomSheet(context);
+                            },
+                            child: Center(
+                                child: Text("fund acount",
+                                    style: TextStyle(color: Colors.white))),
+                          ),
+                        )
+                      ]),
+                )
+              ],
+            ),
+          );
+        });
+  }
+
+  bottomSheet(context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (BuildContext c) {
+          return Scaffold(
+            body: SingleChildScrollView(
+              child: Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.symmetric(
+                        horizontal: 20,
+                      ),
+                      child: TextFormField(
+                        decoration: InputDecoration(hintText: "Card Number"),
+                        maxLength: 19,
+                        onChanged: (value) {
+                          setState(() {
+                            cardNumber = value;
+                          });
+                        },
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.symmetric(
+                        horizontal: 20,
+                      ),
+                      child: TextFormField(
+                        decoration: InputDecoration(hintText: "Card Expiry"),
+                        maxLength: 5,
+                        onChanged: (value) {
+                          setState(() {
+                            expiryDate = value;
+                          });
+                        },
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.symmetric(
+                        horizontal: 20,
+                      ),
+                      child: TextFormField(
+                        decoration:
+                            InputDecoration(hintText: "Card Holder Name"),
+                        onChanged: (value) {
+                          setState(() {
+                            cardHolderName = value;
+                          });
+                        },
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 25),
+                          child: TextFormField(
+                            decoration: InputDecoration(hintText: "CVV"),
+                            maxLength: 3,
+                            onChanged: (value) {
+                              setState(() {
+                                cvv = value;
+                              });
+                            },
+                            focusNode: _focusNode,
+                          ),
+                        ),
+                        Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                  height: 35,
+                                  width: 35,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: Colors.orange,
+                                  ),
+                                  child: Icon(
+                                    Icons.check,
+                                    color: Colors.white,
+                                  )),
+                              GestureDetector(
+                                onTap: () {
+                                  bottomSheet(context);
+                                },
+                                child: Center(
+                                  child: Text("Use saved card",
+                                      style: TextStyle(color: Colors.black)),
+                                ),
+                              ),
+                              SizedBox(width: 150),
+                              Container(
+                                height: 40,
+                                width: 80,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: Color(0xFFFF8F00),
+                                ),
+                                child: Center(
+                                    child: Text("fund acount",
+                                        style: TextStyle(
+                                            color: Color(0xFF21012B),
+                                            fontWeight: FontWeight.bold))),
+                              )
+                            ]),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
           );
         });
   }

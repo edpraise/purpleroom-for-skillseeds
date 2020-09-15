@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:purple_room/Screens/cart_screen.dart';
+// import 'package:purple_room/Screens/cart_screen.dart';
 import 'package:purple_room/Screens/chat_screen.dart';
 import 'package:purple_room/Screens/gift_ebook.dart';
 import 'package:purple_room/Screens/home4counselling.dart';
-import 'package:purple_room/Screens/landing_home_screen.dart';
+// import 'package:purple_room/Screens/landing_home_screen.dart';
 import 'package:purple_room/Screens/profile_screen.dart';
+import 'package:purple_room/Screens/wallets%20activities/check_out1summary.dart';
 
 class MainScreenHolder extends StatefulWidget {
   @override
@@ -18,7 +19,7 @@ class _MainScreenHolderState extends State<MainScreenHolder> {
   Widget currentPage;
 
   CounselHome homeCounselScreen;
-  CartScreen cartScreen;
+  CartSummary cartSummary;
   ChatScreen chatScreen;
   GiftBook giftBook;
   ProfileScreen profileScreen;
@@ -27,7 +28,7 @@ class _MainScreenHolderState extends State<MainScreenHolder> {
   void initState() {
     super.initState();
     homeCounselScreen = CounselHome();
-    cartScreen = CartScreen();
+    cartSummary = CartSummary();
     chatScreen = ChatScreen();
     giftBook = GiftBook();
     profileScreen = ProfileScreen();
@@ -35,7 +36,7 @@ class _MainScreenHolderState extends State<MainScreenHolder> {
     screens = [
       homeCounselScreen,
       chatScreen,
-      cartScreen,
+      cartSummary,
       giftBook,
       profileScreen,
     ];
