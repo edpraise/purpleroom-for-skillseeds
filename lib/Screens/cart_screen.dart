@@ -4,6 +4,8 @@ import 'package:awesome_card/style/card_background.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:purple_room/Screens/wallets%20activities/cart_confirmation.dart';
+import 'package:purple_room/Screens/wallets%20activities/cart_confirmation.dart';
+import 'package:purple_room/Screens/wallets%20activities/cart_confirmation.dart';
 
 class CartScreen extends StatefulWidget {
   @override
@@ -292,12 +294,14 @@ class _CartScreenState extends State<CartScreen> {
                           color: Colors.orange,
                         ),
                       ),
-                      child: Center(child: GestureDetector(
-                        onTap: (){
-                          Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => WalletConfirmation()));
-                        },
-                        child: Text("Pay"))),
+                      child: Center(
+                          child: GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) =>
+                                        WalletConfirmation()));
+                              },
+                              child: Text("Pay"))),
                     ),
                   ),
                 ],

@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               Container(
                 padding: EdgeInsets.all(55.0),
-                height: MediaQuery.of(context).size.height / 2,
+                height: MediaQuery.of(context).size.height / 2.5,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage("assets/images/homeback.jpg"),
@@ -51,8 +51,8 @@ class _LoginPageState extends State<LoginPage> {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: <Color>[
-                      Colors.purple.withOpacity(0.2),
-                      Colors.purple.withOpacity(0.8),
+                      Colors.black.withOpacity(0.2),
+                      Color(0xFF21012B).withOpacity(0.8),
                       Color(0xFF21012B),
                     ],
                   ),
@@ -62,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                 padding: const EdgeInsets.all(30.0),
                 child: SingleChildScrollView(
                   child: Container(
-                    height: MediaQuery.of(context).size.height,
+                    height: MediaQuery.of(context).size.height/1.22,
                     child: Column(
                       children: [
                         Expanded(
@@ -74,16 +74,16 @@ class _LoginPageState extends State<LoginPage> {
                                 color: Colors.orangeAccent,
                                 size: 30,
                               ),
-                              SizedBox(
-                                width: 20,
-                              ),
+                              // SizedBox(
+                              //   width: 20,
+                              // ),
                               Text("Purple",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 30,
                                       fontWeight: FontWeight.bold)),
                               SizedBox(
-                                width: 10,
+                                width: 5,
                               ),
                               Text("Room",
                                   style: TextStyle(
@@ -98,28 +98,31 @@ class _LoginPageState extends State<LoginPage> {
                             validator: (value) {},
                             controller: _firstNameController,
                             obscureText: false,
-                            label: "Email",
-                            hint: "Email here"),
+                            label: "EMAIL",
+                            hint: "email here"),
                         CustomInput(
                             validator: (value) {},
                             controller: _paswordController,
                             obscureText: true,
-                            label: "password",
-                            hint: "Password here"),
+                            label: "PASSWORD",
+                            hint: "password here"
+                            
+                            ),
+                            SizedBox(height: 20),
                         new FlatButton(
                             padding: EdgeInsets.symmetric(horizontal: 125),
                             color: Color(0xFFFF8F00),
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(8)),
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (context) => MainScreenHolder()));
                             },
-                            child: new Text('LOGIN')),
+                            child: new Text('LOGIN', style: TextStyle(fontWeight: FontWeight.bold))),
                         Row(
                           children: [
                             Container(
-                              color: Colors.white,
+                              color: Colors.grey,
                               height: 1,
                               width: MediaQuery.of(context).size.width / 3.5,
                             ),
@@ -127,14 +130,14 @@ class _LoginPageState extends State<LoginPage> {
                               width: 5,
                             ),
                             Text(
-                              "Social logins",
-                              style: TextStyle(color: Colors.white),
+                              "Social Logins",
+                              style: TextStyle(color: Colors.white,),
                             ),
                             SizedBox(
                               width: 5,
                             ),
                             Container(
-                              color: Colors.white,
+                              color: Colors.grey,
                               height: 1,
                               width: MediaQuery.of(context).size.width / 4,
                             ),
@@ -144,27 +147,47 @@ class _LoginPageState extends State<LoginPage> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            IconButton(
-                              icon: Icon(MaterialCommunityIcons.google),
-                              onPressed: () {},
+                            Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                color:Color(0xFFFF8F00),
+                                borderRadius: BorderRadius.circular(50)
+                              ),
+                              child: IconButton(
+                                icon: Icon(MaterialCommunityIcons.google),
+                                onPressed: () {},
+                              ),
                             ),
-                            IconButton(
-                              icon: Icon(MaterialCommunityIcons.facebook),
-                              onPressed: () {},
+                            SizedBox(width: 30),
+                            Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                 color:Color(0xFFFF8F00),
+                                borderRadius: BorderRadius.circular(50)
+                              ),
+                              child: IconButton(
+                                icon: Icon(MaterialCommunityIcons.facebook),
+                                onPressed: () {},
+                              ),
                             ),
                           ],
                         ),
+                        SizedBox(height: 10,),
                         Text(
                           "Dont have an account?",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.grey),
                         ),
+                        SizedBox(height: 10,),
                         SizedBox(height: 5),
                         GestureDetector(
-                          onTap: (){
-                            Navigator.of(context).push(MaterialPageRoute(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
                                   builder: (context) => Registar()));
-                          },
-                          child: Text("REGISTER", style: TextStyle(color: Colors.white)))
+                            },
+                            child: Text("REGISTER",
+                                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)))
                       ],
                     ),
                   ),
