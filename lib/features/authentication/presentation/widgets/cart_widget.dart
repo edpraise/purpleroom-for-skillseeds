@@ -15,93 +15,104 @@ class CartWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-            width: 150,
-            height:150,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            // padding: EdgeInsets.all(4),
-            child: Center(
-              child: Container(
-                width: 150,
-                height: 200,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage(imageUrl),
-                  ),
-                  borderRadius: BorderRadius.circular(10),
-                ),
+        Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+              width: 450,
+              height:230,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
               ),
-            )),
-        SizedBox(width: 40),
+              // padding: EdgeInsets.all(4),
+              child: Center(
+                child: Container(
+                    width: 450,
+                    height: 250,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(imageUrl),
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                ),
+              )),
+                  ),
+        ),
+        SizedBox(width: 10),
         Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title, style: TextStyle(color: Colors.white)),
-            SizedBox(height: 2),
+            Text(title, style: TextStyle(color: Colors.white,fontSize: 20)),
+            SizedBox(height: 10),
             Text(author, style: TextStyle(color: Colors.white, fontSize: 12)),
+            SizedBox(height: 10),
             Row(
               children: [
                 Icon(
                   Icons.star,
-                  color: Colors.orangeAccent,
-                  size: 12,
+                  color: Colors.orange,
+                  size: 16,
                 ),
                 Icon(
                   Icons.star,
-                  color: Colors.orangeAccent,
-                  size: 12,
+                  color: Colors.orange,
+                  size:16,
                 ),
                 Icon(
                   Icons.star,
-                  color: Colors.orangeAccent,
-                  size: 12,
+                  color: Colors.orange,
+                  size:16,
                 ),
                 Icon(
                   Icons.star,
-                  color: Colors.orangeAccent,
-                  size: 12,
+                  color: Colors.orange,
+                  size:16,
                 ),
                 Icon(
                   Icons.star,
-                  color: Colors.white,
-                  size: 12,
+                  color: Colors.grey,
+                  size:16,
                 ),
               ],
             ),
+            SizedBox(height: 10),
             Text(
               desc,
               style: TextStyle(color: Colors.white, fontSize: 10),
             ),
-            SizedBox(height: 5),
-            Wrap(
-              spacing: 2.0, // gap between adjacent chips
-              runSpacing: 2.0, // gap between lines
-              direction: Axis.vertical,
+            SizedBox(height: 50),
+            Row(
               children: [
                 Container(
                   child: RaisedButton(
-                    color: Colors.orangeAccent,
+                    color: Colors.orange,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
                     onPressed: () {},
                     child: const Text('Add to cart',
-                        style: TextStyle(fontSize: 15)),
+                        style: TextStyle(fontSize: 15,color: Colors.white)),
                   ),
+                  
                 ),
-                RaisedButton(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  onPressed: () {},
-                  child:
-                      const Text('Buy    Now', style: TextStyle(fontSize: 15)),
-                ),
+                SizedBox(width: 10,),
+                Container(
+                  child: RaisedButton(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+              onPressed: () {},
+              child:
+                    const Text('Buy   Now', style: TextStyle(fontSize: 15)),
+            ),
+                )
               ],
-            )
+            ),
+            
           ],
         )
       ],

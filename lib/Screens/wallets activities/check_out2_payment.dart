@@ -206,7 +206,10 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                       horizontal: 20,
                     ),
                     child: TextFormField(
-                      decoration: InputDecoration(hintText: "Card Number"),
+                      decoration: InputDecoration(
+                        hintText: "Name on Card",
+                        hintStyle: TextStyle(color:Colors.white, fontSize: 12)
+                        ),
                       maxLength: 19,
                       onChanged: (value) {
                         setState(() {
@@ -220,7 +223,8 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                       horizontal: 20,
                     ),
                     child: TextFormField(
-                      decoration: InputDecoration(hintText: "Card Expiry"),
+                      decoration: InputDecoration(hintText: "Card Expiry",
+                        hintStyle: TextStyle(color:Colors.white, fontSize: 12)),
                       maxLength: 5,
                       onChanged: (value) {
                         setState(() {
@@ -234,7 +238,8 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                       horizontal: 20,
                     ),
                     child: TextFormField(
-                      decoration: InputDecoration(hintText: "Card Holder Name"),
+                      decoration: InputDecoration(hintText: "Card Holder Name", 
+                       hintStyle: TextStyle(color:Colors.white, fontSize: 12)),
                       onChanged: (value) {
                         setState(() {
                           cardHolderName = value;
@@ -248,8 +253,9 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                         margin:
                             EdgeInsets.symmetric(horizontal: 20, vertical: 25),
                         child: TextFormField(
-                          decoration: InputDecoration(hintText: "CVV"),
-                          maxLength: 3,
+                          decoration: InputDecoration(hintText: "CVV", 
+                           hintStyle: TextStyle(color:Colors.white, fontSize: 12)),
+                          maxLength: 3,style: TextStyle(color: Colors.white),
                           onChanged: (value) {
                             setState(() {
                               cvv = value;
@@ -274,6 +280,7 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                                     Icons.check,
                                     color: Colors.white,
                                   )),
+                                  SizedBox(height:5),
                               Center(
                                 child: Text("Save Card details",
                                     style: TextStyle(color: Colors.white)),

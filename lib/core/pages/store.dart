@@ -28,24 +28,26 @@ class _StoreState extends State<Store> {
           padding: const EdgeInsets.all(5.0),
           child:
               SingleChildScrollView(
-                              child: Row(
+                              child: Expanded(
+                  child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center, 
                   children: [
             Container(
-                  height: 80,
+                  height: 100,
                   width: 50,
                   decoration: BoxDecoration(color: Colors.grey)),
             SizedBox(width: 10),
             Container(
-                  height: 110,
+                  height: 170,
                   width: 220,
                   decoration: BoxDecoration(color: Colors.grey)),
             SizedBox(width: 10),
             Container(
-                  height: 80,
+                  height: 100,
                   width: 50,
                   decoration: BoxDecoration(color: Colors.grey)),
           ]),
+                              ),
               ),
         ),
         Padding(

@@ -51,15 +51,21 @@ class _GiftBookState extends State<GiftBook> {
             "Ebooks",
           ),
           actions: [
-            AppBarActions()
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: AppBarActions(),
+            )
           ],
         ),
+      
         body: Column(
           children: [
+            
             Search(),
             SizedBox(
               height: 5,
             ),
+              SizedBox(height: 15,),
             Expanded(
               child: ListView.separated(
                   separatorBuilder: (context, index) => Divider(

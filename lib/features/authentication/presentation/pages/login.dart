@@ -51,8 +51,8 @@ class _LoginPageState extends State<LoginPage> {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: <Color>[
-                      Colors.black.withOpacity(0.2),
-                      Color(0xFF21012B).withOpacity(0.8),
+                      Color(0xFF21012B).withOpacity(0.7),
+                      Color(0xFF21012B).withOpacity(0.9),
                       Color(0xFF21012B),
                     ],
                   ),
@@ -62,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                 padding: const EdgeInsets.all(30.0),
                 child: SingleChildScrollView(
                   child: Container(
-                    height: MediaQuery.of(context).size.height/1.22,
+                    height: MediaQuery.of(context).size.height/1.12,
                     child: Column(
                       children: [
                         Expanded(

@@ -17,18 +17,22 @@ class _ChatScreenState extends State<ChatScreen>
     return Scaffold(
       backgroundColor: Color(0xFF21012B),
       appBar: AppBar(
+        titleSpacing: -10.0,
         leading: Icon(
           Icons.tv,
           color: Colors.orangeAccent,
         ),
         backgroundColor: Color(0xFF21012B),
         title: Row(
-          children: [Text("Purple"), Text("Room")],
+          children: [Text("Purple"), Text("Room", style: TextStyle(color: Colors.orange)),]
         ),
         actions: [
-          Icon(Icons.notifications),
-          SizedBox(width: 5),
-          Icon(Icons.apps)
+          Icon(Icons.notifications_none),
+          // SizedBox(width: 5),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Icon(Icons.apps),
+          )
         ],
       ),
       body: Container(
@@ -39,9 +43,12 @@ class _ChatScreenState extends State<ChatScreen>
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "All Message",
-                    style: TextStyle(color: Colors.white),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text(
+                      "All Message",
+                      style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
                   ),
                   CircularProfileAvatar(
                     '',
@@ -49,7 +56,7 @@ class _ChatScreenState extends State<ChatScreen>
                     borderColor: Color(0xFFFF8F00),
                     borderWidth: 2,
                     // elevation: 5,
-                    radius: 20,
+                    radius: 30,
                   ),
                 ],
               ),
@@ -70,9 +77,10 @@ class _ChatScreenState extends State<ChatScreen>
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           image: DecorationImage(image:
-                          ExactAssetImage("assets/images/bls.jpg")
+                          ExactAssetImage(list[index].imageUrl,),fit: BoxFit.cover
                           )
                         )
+                        // child: imageUrl,
                       ),
                       title: Text(
                         list[index].people.friend,
@@ -89,8 +97,18 @@ class _ChatScreenState extends State<ChatScreen>
                                 SizedBox(width: 27),
                                 Text(
                                   list[index].lastMessageTime ,
-                                  style: TextStyle(color: Colors.white),
+                                  style: TextStyle(color: Colors.white, fontSize: 10),
+                                ),
+                                list[index].numberMess == "" ? Container() : Container(
+                                  height: 15,
+                                  width: 18,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(2),
+                                    color: Color(0xFFcc7a00)
+                                  ),
+                                  child: Center(child: Text(list[index].numberMess, style: TextStyle(fontWeight: FontWeight.bold),)),
                                 )
+                                
 
                               ],
                             ),

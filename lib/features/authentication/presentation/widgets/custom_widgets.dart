@@ -39,12 +39,14 @@ class CustomInput extends StatelessWidget {
             validator: validator,
             obscureText: obscureText? obscureText: false,
             decoration: InputDecoration(
-              suffix: GestureDetector(
+              
+              suffix: obscureText?GestureDetector(
+                
                 onTap: (){
                   Navigator.of(context).push(MaterialPageRoute(
                                   builder: (context) => ForgotPassword()));
                 },
-                child: Text("Forgot?", style: TextStyle(color:Colors.white,))), 
+                child: Text("Forgot?", style: TextStyle(color:Colors.white,))):Offstage(), 
              
               isDense: true,
               hintText: hint,

@@ -56,6 +56,7 @@ class _CounselHomeState extends State<CounselHome> {
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
+                    SizedBox(height: 10,),
                     Text(
                       "lets explore whats happening today",
                       style:
@@ -63,7 +64,7 @@ class _CounselHomeState extends State<CounselHome> {
                     )
                   ],
                 ),
-                SizedBox(width: 65),
+                SizedBox(width: 55),
                 CircularProfileAvatar(
                   '',
                   child: Image.asset('assets/images/bls.jpg'),

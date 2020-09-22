@@ -11,7 +11,7 @@ class AppBarActions extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Row(
         children: [
-          Icon(Icons.notifications),
+          Icon(Icons.notifications_none),
           SizedBox(width: 10),
           Icon(Icons.apps),
         ],
