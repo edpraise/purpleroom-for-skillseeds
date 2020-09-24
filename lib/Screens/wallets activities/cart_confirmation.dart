@@ -131,7 +131,7 @@ class _WalletConfirmationState extends State<WalletConfirmation> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Image.asset(
-                  'assets/images/vb.jpg',
+                  'assets/images/mk.jpg',
                   fit: BoxFit.contain,
                 )),
           ),

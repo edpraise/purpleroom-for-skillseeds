@@ -34,33 +34,35 @@ class CustomInput extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(4.0),
           child: TextFormField(
-            
-            controller: controller,
-            validator: validator,
-            obscureText: obscureText? obscureText: false,
-            decoration: InputDecoration(
-              
-              suffix: obscureText?GestureDetector(
+              autocorrect: true,
+
+              controller: controller,
+              validator: validator,
+              obscureText: obscureText? obscureText: false,
+              decoration: InputDecoration(
+                // border: 
+                suffix: obscureText?GestureDetector(
+                  
+                  onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => ForgotPassword()));
+                  },
+                  child: Text("Forgot?", style: TextStyle(color:Colors.white,))):Offstage(), 
+               
+                // isDense: true,
+                hintText: hint,
+                hintStyle: TextStyle(color: Colors.white, fontSize: 12),
                 
-                onTap: (){
-                  Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => ForgotPassword()));
-                },
-                child: Text("Forgot?", style: TextStyle(color:Colors.white,))):Offstage(), 
-             
-              isDense: true,
-              hintText: hint,
-              hintStyle: TextStyle(color: Colors.white, fontSize: 12),
-              border: new OutlineInputBorder(
-              //  borderSide: ,
-                borderRadius: const BorderRadius.all(
-                  const Radius.circular(10.0),
-                ),
+                // border: new OutlineInputBorder(
+                //   borderSide: new BorderSide(color: Colors.transparent),
+                //   borderRadius: const BorderRadius.all(
+                //     const Radius.circular(10.0),
+                //   ),
+                // ),
+                filled: true,
+                fillColor: Color(0xFF410255),
               ),
-              filled: true,
-              fillColor: Color(0xFF410255),
             ),
-          ),
         ),
       ],
     );

@@ -49,7 +49,10 @@ class _CkOutPaymeState extends State<CkOutPayme> {
         title: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
-            children: [Text("Purple"), Text("Room", style:TextStyle(color: Colors.orange))],
+            children: [
+              Text("Purple"),
+              Text("Room", style: TextStyle(color: Colors.orange))
+            ],
           ),
         ),
         actions: [
@@ -58,11 +61,11 @@ class _CkOutPaymeState extends State<CkOutPayme> {
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: GestureDetector(
-              onTap: (){
-                 Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => TopicSelection()));
-              },
-              child: Icon(Icons.apps)),
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => TopicSelection()));
+                },
+                child: Icon(Icons.apps)),
           )
         ],
       ),
@@ -80,7 +83,7 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                     children: [
                       Text(
                         "Checkout",
-                        style: TextStyle(color: Colors.white,fontSize: 15),
+                        style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                       CircularProfileAvatar(
                         '',
@@ -99,8 +102,8 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                     children: [
                       CircularProfileAvatar(
                         '',
-                        child:
-                            Icon(Icons.check, color: Color(0xFF00ff00), size: 14),
+                        child: Icon(Icons.check,
+                            color: Color(0xFF00ff00), size: 14),
                         borderColor: Color(0xFF00ff00),
                         borderWidth: 2,
                         backgroundColor: Color(0xFF21012B),
@@ -117,8 +120,8 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                       ),
                       CircularProfileAvatar(
                         '',
-                        child:
-                            Icon(Icons.check, color: Color(0xFF00ff00), size: 14),
+                        child: Icon(Icons.check,
+                            color: Color(0xFF00ff00), size: 14),
                         borderColor: Color(0xFF00ff00),
                         borderWidth: 2,
                         backgroundColor: Color(0xFF21012B),
@@ -208,7 +211,8 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                               color: Colors.orange,
                             ),
                           ),
-                          child: Icon(Icons.child_friendly, color: Colors.orange),
+                          child:
+                              Icon(Icons.child_friendly, color: Colors.orange),
                         ),
                       ),
                     ],
@@ -226,15 +230,15 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                       child: TextFormField(
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          hintText: "Name on Card",
-                           enabledBorder: UnderlineInputBorder(
-                           borderSide: BorderSide(color: Colors.orange),
-                         ),
-                          focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange),
-                        ),
-                          hintStyle: TextStyle(color:Colors.grey, fontSize: 12)
-                          ),
+                            hintText: "Name on Card",
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.orange),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.orange),
+                            ),
+                            hintStyle:
+                                TextStyle(color: Colors.grey, fontSize: 12)),
                         // maxLength: 19,
                         onChanged: (value) {
                           setState(() {
@@ -243,24 +247,22 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                         },
                       ),
                     ),
-                     Container(
+                    Container(
                       margin: EdgeInsets.symmetric(
                         horizontal: 20,
                       ),
                       child: TextFormField(
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          hintText: "Card Number", 
-                         hintStyle: TextStyle(color:Colors.grey, fontSize: 12),
-                        enabledBorder: UnderlineInputBorder(
-                           borderSide: BorderSide(color: Colors.orange),
-                           
-                         ),
-                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange),
-                        )
-                         ),
-                        
+                            hintText: "Card Number",
+                            hintStyle:
+                                TextStyle(color: Colors.grey, fontSize: 12),
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.orange),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.orange),
+                            )),
                         onChanged: (value) {
                           setState(() {
                             cardHolderName = value;
@@ -274,17 +276,20 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Expanded(
-                              child: TextFormField(
-                                style: TextStyle(color: Colors.white),
-                              decoration: InputDecoration(hintText: "Expiry Date",
-                               enabledBorder: UnderlineInputBorder(
-                                 borderSide: BorderSide(color: Colors.orange),
-                               ),
-                                focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange),
-                        ),
-
-                                hintStyle: TextStyle(color:Colors.grey, fontSize: 12)),
+                            child: TextFormField(
+                              style: TextStyle(color: Colors.white),
+                              decoration: InputDecoration(
+                                  hintText: "Expiry Date",
+                                  enabledBorder: UnderlineInputBorder(
+                                    borderSide:
+                                        BorderSide(color: Colors.orange),
+                                  ),
+                                  focusedBorder: UnderlineInputBorder(
+                                    borderSide:
+                                        BorderSide(color: Colors.orange),
+                                  ),
+                                  hintStyle: TextStyle(
+                                      color: Colors.grey, fontSize: 12)),
                               // maxLength: 5,
                               onChanged: (value) {
                                 setState(() {
@@ -293,34 +298,39 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                               },
                             ),
                           ),
-                          SizedBox(width: 30,),
-                           Expanded(
-                          child: TextFormField(
-                            style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(hintText: "CVV", 
-                        enabledBorder: UnderlineInputBorder(
-                       borderSide: BorderSide(color: Colors.orange),
-                       ),
-                        focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.orange),
-                        ),
-                         hintStyle: TextStyle(color:Colors.grey, fontSize: 12)),
-                        // maxLength: 3,style: TextStyle(color: Colors.white),
-                        onChanged: (value) {
-                          setState(() {
-                              cvv = value;
-                          });
-                        },
-                        focusNode: _focusNode,
-                      ),
-                           ),
-
-
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Expanded(
+                            child: TextFormField(
+                              style: TextStyle(color: Colors.white),
+                              decoration: InputDecoration(
+                                  hintText: "CVV",
+                                  enabledBorder: UnderlineInputBorder(
+                                    borderSide:
+                                        BorderSide(color: Colors.orange),
+                                  ),
+                                  focusedBorder: UnderlineInputBorder(
+                                    borderSide:
+                                        BorderSide(color: Colors.orange),
+                                  ),
+                                  hintStyle: TextStyle(
+                                      color: Colors.grey, fontSize: 12)),
+                              // maxLength: 3,style: TextStyle(color: Colors.white),
+                              onChanged: (value) {
+                                setState(() {
+                                  cvv = value;
+                                });
+                              },
+                              focusNode: _focusNode,
+                            ),
+                          ),
                         ],
                       ),
                     ),
-                   
-                   SizedBox(height: 10,),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: Row(
@@ -337,11 +347,12 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                                   Icons.check,
                                   color: Colors.white,
                                 )),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text("Save this Card Details",  style: TextStyle(color: Colors.white)),
-                                )
-                                // SizedBox(height:),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("Save this Card Details",
+                                  style: TextStyle(color: Colors.white)),
+                            )
+                            // SizedBox(height:),
                             // Center(
                             //   child: Text("Save Card details",
                             //       style: TextStyle(color: Colors.white)),
@@ -365,19 +376,24 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 30,
-                              width: 100,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color(0xFF21012B),
-                                border: Border.all(
-                                  color: Colors.orange,
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.pop(context);
+                              },
+                              child: Container(
+                                height: 30,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: Color(0xFF21012B),
+                                  border: Border.all(
+                                    color: Colors.orange,
+                                  ),
                                 ),
+                                child: Center(
+                                    child: Text("Back",
+                                        style: TextStyle(color: Colors.white))),
                               ),
-                              child: Center(
-                                  child: Text("Back",
-                                      style: TextStyle(color: Colors.white))),
                             ),
                           ),
                           Padding(

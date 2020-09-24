@@ -28,12 +28,12 @@ class _CounselMainScreenState extends State<CounselMainScreen> {
   ];
 
   List<Map<String, dynamic>> listOfChatAbleCounsellors = [
-    // {
-    //   "imageUrl": "assets/images/1.jpg",
-    //   "name": "joe",
-    //   "city":"Berlin",
-    //   "bookbtn": "Book now",
-    // },
+    {
+      "imageUrl": "assets/images/1.jpg",
+      "name": "joey biden",
+      "city":"Berlin",
+      "bookbtn": "Book now",
+    },
     {
       "imageUrl": "assets/images/2.jpg",
       "name": "Kenneth Erick",
@@ -47,6 +47,42 @@ class _CounselMainScreenState extends State<CounselMainScreen> {
       "bookbtn": "Book now",
     },
     {
+      "imageUrl": "assets/images/4.jpg",
+      "name": "Lannet Strand",
+      "city": "chicago",
+      "bookbtn": "Book now",
+    },
+      {
+      "imageUrl": "assets/images/4.jpg",
+      "name": "Lannet Strand",
+      "city": "chicago",
+      "bookbtn": "Book now",
+    },
+      {
+      "imageUrl": "assets/images/4.jpg",
+      "name": "Lannet Strand",
+      "city": "chicago",
+      "bookbtn": "Book now",
+    },
+      {
+      "imageUrl": "assets/images/4.jpg",
+      "name": "Lannet Strand",
+      "city": "chicago",
+      "bookbtn": "Book now",
+    },
+      {
+      "imageUrl": "assets/images/4.jpg",
+      "name": "Lannet Strand",
+      "city": "chicago",
+      "bookbtn": "Book now",
+    },
+      {
+      "imageUrl": "assets/images/4.jpg",
+      "name": "Lannet Strand",
+      "city": "chicago",
+      "bookbtn": "Book now",
+    },
+      {
       "imageUrl": "assets/images/4.jpg",
       "name": "Lannet Strand",
       "city": "chicago",
@@ -95,69 +131,80 @@ class _CounselMainScreenState extends State<CounselMainScreen> {
               SizedBox(height: 20),
               Expanded(
                 child: ListView.separated(
-                  separatorBuilder: (BuildContext context, int index) => Divider(),
-                  itemCount: listOfChatAbleCounsellors.length,
-                  itemBuilder: (context, int index) {
-                  return Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        CircularProfileAvatar(
-                          '',
-                          child: Image.asset("${listOfChatAbleCounsellors[index]['imageUrl']}", fit: BoxFit.cover,),
-                          // borderColor: Color(0xFFFF8F00),
-                          // borderWidth: 2,
-                          elevation: 5,
-                          radius: 25,
-                        ),
-                        Badge(
-                          alignment: Alignment.bottomRight,
-                          // position:,
-      badgeColor: Colors.green,
-      shape: BadgeShape.circle,
-      borderRadius: 5,
-      toAnimate: false,
-      
-         
-    ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(listOfChatAbleCounsellors[index]['name'],
-                                style: TextStyle(color: Colors.white)),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(listOfChatAbleCounsellors[index]['city'],
-                                style:
-                                    TextStyle(color: Colors.grey, fontSize: 12)),
-                          ],
-                        ),
-                        SizedBox(
-                          width: 100,
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => Cprofile()));
-                          },
-                          child: Container(
-                              height: 30,
-                              width: 70,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: Colors.white),
-                              child: Center(
-                                  child: Text("Book now",
-                  style: TextStyle(color: Colors.black)))),
-                        ),
-                      ],
-                    );
-                }),
+                    separatorBuilder: (BuildContext context, int index) =>
+                        Divider(),
+                    itemCount: listOfChatAbleCounsellors.length,
+                    itemBuilder: (context, int index) {
+                      return Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Stack(
+                            children: [
+                              CircularProfileAvatar(
+                                '',
+                                child: Image.asset(
+                                  "${listOfChatAbleCounsellors[index]['imageUrl']}",
+                                  fit: BoxFit.cover,
+                                ),
+                                // borderColor: Color(0xFFFF8F00),
+                                // borderWidth: 2,
+                                elevation: 5,
+                                radius: 25,
+                              ),
+                              Positioned(
+                                bottom: 1,
+                                right: 1,
+                                                              child: Badge(
+                                  alignment: Alignment.bottomRight,
+                                  // position:,
+                                  badgeColor: Colors.green,
+                                  shape: BadgeShape.circle,
+                                  borderRadius: 8,
+                                  toAnimate: false,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(listOfChatAbleCounsellors[index]['name'],
+                                  style: TextStyle(color: Colors.white)),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(listOfChatAbleCounsellors[index]['city'],
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 12)),
+                            ],
+                          ),
+                          SizedBox(
+                            width: 100,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => Cprofile()));
+                            },
+                            child: Container(
+                                height: 30,
+                                width: 70,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.white),
+                                child: Center(
+                                    child: Text("Book now",
+                                        style:
+                                            TextStyle(color: Colors.black, fontSize: 10, fontWeight: FontWeight.bold)))),
+                          ),
+                        ],
+                      );
+                    }),
               )
             ],
           ),
@@ -174,7 +221,7 @@ class _CounselMainScreenState extends State<CounselMainScreen> {
             children: [
               Icon(icon, color: Colors.white),
               SizedBox(height: 20),
-              Text(categoryName, style: TextStyle(color:Colors.white)),
+              Text(categoryName, style: TextStyle(color: Colors.white)),
             ],
           ),
         ),

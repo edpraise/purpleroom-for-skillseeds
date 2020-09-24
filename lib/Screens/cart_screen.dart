@@ -5,8 +5,8 @@ import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:purple_room/Screens/topic_selection.dart';
 import 'package:purple_room/Screens/wallets%20activities/cart_confirmation.dart';
-import 'package:purple_room/Screens/wallets%20activities/cart_confirmation.dart';
-import 'package:purple_room/Screens/wallets%20activities/cart_confirmation.dart';
+// import 'package:purple_room/Screens/wallets%20activities/cart_confirmation.dart';
+// import 'package:purple_room/Screens/wallets%20activities/cart_confirmation.dart';
 
 class CartScreen extends StatefulWidget {
   @override
@@ -59,11 +59,11 @@ class _CartScreenState extends State<CartScreen> {
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: GestureDetector(
-              onTap: (){
-                 Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => TopicSelection()));
-              },
-              child: Icon(Icons.apps)),
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => TopicSelection()));
+                },
+                child: Icon(Icons.apps)),
           )
         ],
       ),
@@ -190,8 +190,8 @@ class _CartScreenState extends State<CartScreen> {
                           color: Colors.orange,
                         ),
                       ),
-                      child:
-                          Icon(Icons.account_balance_wallet, color: Colors.black),
+                      child: Icon(Icons.account_balance_wallet,
+                          color: Colors.black),
                     ),
                   ),
                   Padding(
@@ -216,8 +216,8 @@ class _CartScreenState extends State<CartScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child:
-                    Text("Wallet Details", style: TextStyle(color: Colors.white)),
+                child: Text("Wallet Details",
+                    style: TextStyle(color: Colors.white)),
               ),
               SizedBox(height: 10),
               Padding(
@@ -279,19 +279,24 @@ class _CartScreenState extends State<CartScreen> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        height: 30,
-                        width: 100,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xFF21012B),
-                          border: Border.all(
-                            color: Colors.orange,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          height: 30,
+                          width: 100,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color(0xFF21012B),
+                            border: Border.all(
+                              color: Colors.orange,
+                            ),
                           ),
+                          child: Center(
+                              child: Text("Back",
+                                  style: TextStyle(color: Colors.white))),
                         ),
-                        child: Center(
-                            child: Text("Back",
-                                style: TextStyle(color: Colors.white))),
                       ),
                     ),
                     Padding(
@@ -388,7 +393,9 @@ class _CartScreenState extends State<CartScreen> {
                             },
                             child: Center(
                                 child: Text("fund acount",
-                                    style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold))),
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold))),
                           ),
                         )
                       ]),

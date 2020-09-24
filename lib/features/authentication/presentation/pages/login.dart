@@ -34,11 +34,14 @@ class _LoginPageState extends State<LoginPage> {
             EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
         child: Container(
           child: Stack(
+
             children: [
               Container(
+
                 padding: EdgeInsets.all(55.0),
-                height: MediaQuery.of(context).size.height / 2.5,
+                height: MediaQuery.of(context).size.height / 2.0,
                 decoration: BoxDecoration(
+                  color: Colors.transparent,
                   image: DecorationImage(
                     image: AssetImage("assets/images/homeback.jpg"),
                     fit: BoxFit.cover,
@@ -47,12 +50,13 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Container(
                 decoration: BoxDecoration(
+                  color: Color(0xFF21012B),
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: <Color>[
                       Color(0xFF21012B).withOpacity(0.7),
-                      Color(0xFF21012B).withOpacity(0.9),
+                      Color(0xFF21012B),
                       Color(0xFF21012B),
                     ],
                   ),

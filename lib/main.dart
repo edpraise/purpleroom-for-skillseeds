@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:purple_room/features/authentication/presentation/pages/login.dart';
+import 'package:purple_room/core/pages/landiing_page.dart';
+// import 'package:purple_room/features/authentication/presentation/pages/login.dart';
 
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LoginPage(),
+      home: LandingPage(),
     );
   }
 }

@@ -87,6 +87,8 @@ flutter:
     - assets/images/s.jpg
     - assets/images/sp.jpg
     - assets/images/mk.png
+    - assets/images/p.png
+
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
