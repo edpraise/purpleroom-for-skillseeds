@@ -1,10 +1,10 @@
-import 'package:purple_room/models/review_person.dart';
+// import 'package:purple_room/models/review_person.dart';
 
 class Review {
   final String reviewerName;
   final String reviewMessage;
   final String messagetime;
-  final ReviewerPic reviewerPic;
+  final String reviewerPic;
   
 
   Review(
@@ -18,28 +18,34 @@ class Review {
       reviewMessage: 'khcihfiuahicinehfoascvbubviasc',
       reviewerName: 'barns',
       messagetime: '2pm',
+      reviewerPic: 'assets/images/1.jpg',
     ),
      Review(
-      reviewMessage: 'khcihfiuahicinehfoascvbubviaschiwfh',
+      reviewMessage: 'khcihfiuahicineb',
       reviewerName: 'JOE',
       messagetime: '6Am',
+      reviewerPic: 'assets/images/2.jpg'
     ), Review(
-      reviewMessage: 'khcihfiuahicinehfoascvbubviaschiwfh',
+      reviewMessage: 'khcihfiuahicin',
       reviewerName: 'mrs ken',
       messagetime: '1pm',
+      reviewerPic: 'assets/images/3.jpg'
       
     ), Review(
-      reviewMessage: 'khcihfiuahicinehfoascvbubviaschiwfh',
+      reviewMessage: 'khcihfiuahice',
       reviewerName: 'ed',
       messagetime: '7am',
+      reviewerPic: 'assets/images/4.jpg'
     ), Review(
-      reviewMessage: 'khcihfiuahicinehfoascvbubviaschiwfh',
+      reviewMessage: 'khcihfiuahicinehfi',
       reviewerName: 'cholesky',
       messagetime: '10pm',
+      reviewerPic: 'assets/images/5.jpg'
     ), Review(
-      reviewMessage: 'khcihfiuahicinehfoascvbubviasc',
+      reviewMessage: 'khcihfiuahicinehfoasc',
       reviewerName: 'mitch',
       messagetime: '3days ago',
+      reviewerPic: 'assets/images/a.jpg'
     ),
     ];
 }

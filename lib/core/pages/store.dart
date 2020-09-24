@@ -77,12 +77,15 @@ class _StoreState extends State<Store> {
                   );
                 })),
                 // SizedBox(height:5),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Customized shirts", style: TextStyle(color: Colors.white)),
-                    Text("see all", style: TextStyle(color: Colors.white),)
-                  ],
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Customized shirts", style: TextStyle(color: Colors.white)),
+                      Text("see all", style: TextStyle(color: Colors.white),)
+                    ],
+                  ),
                 ),
                 // SizedBox(height: 2,),
            Row(

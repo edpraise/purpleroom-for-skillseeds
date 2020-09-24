@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:purple_room/Screens/topic_selection.dart';
 
 class AppBarActions extends StatelessWidget {
   const AppBarActions({
@@ -13,7 +14,12 @@ class AppBarActions extends StatelessWidget {
         children: [
           Icon(Icons.notifications_none),
           SizedBox(width: 10),
-          Icon(Icons.apps),
+          GestureDetector(
+            onTap: (){
+               Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => TopicSelection()));
+            },
+            child: Icon(Icons.apps)),
         ],
       ),
     );

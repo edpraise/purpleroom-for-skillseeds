@@ -2,6 +2,8 @@ import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:purple_room/Screens/wallets%20activities/check_out2_payment.dart';
 
+import '../topic_selection.dart';
+
 class CartSummary extends StatefulWidget {
   @override
   _CartSummaryState createState() => _CartSummaryState();
@@ -13,6 +15,7 @@ class _CartSummaryState extends State<CartSummary> {
     return Scaffold(
       backgroundColor: Color(0xFF21012B),
       appBar: AppBar(
+        titleSpacing: -10.0,
         leading: Icon(
           Icons.tv,
           color: Colors.orangeAccent,
@@ -22,9 +25,17 @@ class _CartSummaryState extends State<CartSummary> {
           children: [Text("Purple"), Text("Room")],
         ),
         actions: [
-          Icon(Icons.notifications),
+          Icon(Icons.notifications_none),
           SizedBox(width: 5),
-          Icon(Icons.apps)
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: GestureDetector(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => TopicSelection()));
+              },
+              child: Icon(Icons.apps)),
+          )
         ],
       ),
       body: SingleChildScrollView(

@@ -26,6 +26,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     return Scaffold(
       backgroundColor: Color(0xFF21012B),
       appBar: AppBar(
+        titleSpacing: -15,
         backgroundColor: Color(0xFF21012B),
         leading: Row(
           children: [
@@ -51,11 +52,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(
-                      'assets/images/vatar.jpg',
-                      width: 40,
-                      height: 40,
-                    ),
+                    Icon(Icons.tv, color: Colors.orange),
                     SizedBox(
                       width: 2,
                     ),
@@ -119,6 +116,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     validator: (value) {},
                     controller: _emailController,
                     label: "EMAIL",
+                    
                     hint: "Email here"),
               ),
             ),

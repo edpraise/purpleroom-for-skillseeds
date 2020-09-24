@@ -1,5 +1,6 @@
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
+import 'package:purple_room/Screens/topic_selection.dart';
 import 'package:purple_room/core/pages/couselling.dart';
 import 'package:purple_room/core/pages/feed.dart';
 import 'package:purple_room/core/pages/store.dart';
@@ -32,7 +33,12 @@ class _CounselHomeState extends State<CounselHome> {
             SizedBox(width: 5),
             Padding(
               padding: const EdgeInsets.all(15.0),
-              child: Icon(Icons.apps),
+              child: GestureDetector(
+                onTap: (){
+                   Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => TopicSelection()));
+                },
+                child: Icon(Icons.apps)),
             )
           ],
         ),

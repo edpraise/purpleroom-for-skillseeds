@@ -1,5 +1,6 @@
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
+import 'package:purple_room/Screens/posts.dart';
 
 class FeedScreen extends StatefulWidget {
   @override
@@ -87,9 +88,15 @@ class _FeedScreenState extends State<FeedScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text(
-                            "Michael Bruno",
-                            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                          GestureDetector(
+                            onTap: (){
+                               Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => PostScreen()));
+                            },
+                                                      child: Text(
+                              "Michael Bruno",
+                              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                            ),
                           ),
                           SizedBox(height: 5,),
                           Text(

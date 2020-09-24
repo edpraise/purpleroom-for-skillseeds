@@ -1,5 +1,6 @@
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
+import 'package:purple_room/Screens/topic_selection.dart';
 import 'package:purple_room/models/chat_model.dart';
 
 import 'messages.dart';
@@ -31,7 +32,12 @@ class _ChatScreenState extends State<ChatScreen>
           // SizedBox(width: 5),
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Icon(Icons.apps),
+            child: GestureDetector(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => TopicSelection()));
+              },
+              child: Icon(Icons.apps)),
           )
         ],
       ),

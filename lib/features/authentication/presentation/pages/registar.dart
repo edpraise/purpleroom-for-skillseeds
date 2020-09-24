@@ -27,6 +27,7 @@ class _RegistarState extends State<Registar> {
     return Scaffold(
       backgroundColor: Color(0xFF21012B),
       appBar: AppBar(
+        titleSpacing: -13,
         backgroundColor: Color(0xFF21012B),
         leading: Row(
           children: [
@@ -50,8 +51,9 @@ class _RegistarState extends State<Registar> {
                   radius: 60,
                   backgroundColor: Colors.black,
                   child: CircleAvatar(
-                    radius: 70,
+                    radius: 50,
                     backgroundImage: AssetImage('assets/images/user-2.png'),
+                    backgroundColor: Colors.black,
                   ),
                 ),
                 SizedBox(height: 18),

@@ -578,6 +578,7 @@ class _BodyWidgetState extends State<BodyWidget> {
 
   Widget getReviewContainer() {
     return Container(
+      height:MediaQuery.of(context).size.height,
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
@@ -603,9 +604,11 @@ class _BodyWidgetState extends State<BodyWidget> {
                   ),
                   // subtitle: list[index].isTyping ?
                   subtitle: Column(
+                    
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        
                         children: [
                           Text(
                             list[index].reviewMessage,
@@ -650,41 +653,39 @@ class _BodyWidgetState extends State<BodyWidget> {
         SizedBox(
           height: 25,
         ),
-        SingleChildScrollView(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(150),
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/bls.jpg'),
-                        fit: BoxFit.fill)),
-              ),
-              SizedBox(width: 10),
-              Flexible(
-                child: Center(
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      isDense: true,
-                      hintText: "Add a Comment",
-                      hintStyle: TextStyle(color: Colors.white, fontSize: 12),
-                      border: new OutlineInputBorder(
-                        borderRadius: const BorderRadius.all(
-                          const Radius.circular(20.0),
-                        ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              height: 50,
+              width: 50,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(150),
+                  image: DecorationImage(
+                      image: AssetImage('assets/images/bls.jpg'),
+                      fit: BoxFit.fill)),
+            ),
+            SizedBox(width: 10),
+            Flexible(
+              child: Center(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    isDense: true,
+                    hintText: "Add a Comment",
+                    hintStyle: TextStyle(color: Colors.white, fontSize: 12),
+                    border: new OutlineInputBorder(
+                      borderRadius: const BorderRadius.all(
+                        const Radius.circular(20.0),
                       ),
-                      filled: true,
-                      fillColor: Color(0xFF410255),
                     ),
+                    filled: true,
+                    fillColor: Color(0xFF410255),
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ],
     )

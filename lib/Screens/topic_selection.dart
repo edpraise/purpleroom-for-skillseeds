@@ -1,47 +1,47 @@
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
+class TopicSelection extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _TopicSelectionState createState() => _TopicSelectionState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _TopicSelectionState extends State<TopicSelection> {
   List<Map<String, dynamic>> topicList = [
     {
-      "imagesrc": "",
+      "imagesrc": "assets/images/p.jpg",
       "title": "politics",
     },
     {
-      "imagesrc": "",
+      "imagesrc": "assets/images/h.png",
       "title": "history",
     },
     {
-      "imagesrc": "",
+      "imagesrc": "assets/images/s.jpg",
       "title": "Science",
     },
     {
-      "imagesrc": "",
+      "imagesrc": "assets/images/la.jpg",
       "title": "law",
     },
     {
-      "imagesrc": "",
+      "imagesrc": "assets/images/food.jpg",
       "title": "food",
     },
     {
-      "imagesrc": "",
+      "imagesrc": "assets/images/doct.jpg",
       "title": "medical",
     },
     {
-      "imagesrc": "",
+      "imagesrc": "assets/images/de.jpg",
       "title": "design",
     },
     {
-      "imagesrc": "",
+      "imagesrc": "assets/images/de.jpg",
       "title": "culture",
     },
     {
-      "imagesrc": "",
+      "imagesrc": "assets/images/sp.jpg",
       "title": "sport",
     }
   ];
@@ -50,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Color(0xFF21012B),
       appBar: AppBar(
+        titleSpacing: -10,
         leading: Icon(
           Icons.tv,
           color: Colors.orangeAccent,
@@ -65,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   children: [
-                    Icon(Icons.notifications),
+                    Icon(Icons.notifications_none),
                     SizedBox(width: 10),
                     Icon(Icons.apps),
                   ],
@@ -99,46 +100,53 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     CircularProfileAvatar(
                       '',
-                      child: Image.asset('assets/images/bls.jpg'),
+                      child: Image.asset('assets/images/x.png'),
                       borderColor: Color(0xFFFF8F00),
                       borderWidth: 2,
                       elevation: 5,
-                      radius: 30,
+                      radius: 40,
                     ),
                   ],
                 ),
                 SizedBox(height: 30),
                 Container(
-                    height: MediaQuery.of(context).size.height/2,
-                   
-                    child: GridView.count(
-                      crossAxisCount: 3,
-                      children: List.generate(9, (index) {
-                        return Column(children: [
-                          CircularProfileAvatar(
-                            '',
-                            child: Image.asset('assets/images/bls.jpg'),
-                            borderColor: Color(0xFFFF8F00),
-                            borderWidth: 2,
-                            elevation: 5,
-                            radius: 30,
-                          ),
-                          Text("${topicList[index]['title']}",
-                              style: TextStyle(color: Colors.white)),
-                        ]);
-                      }),
-                    ),
+                  height: MediaQuery.of(context).size.height / 2,
+                  child: GridView.count(
+                    crossAxisCount: 3,
+                    children: List.generate(9, (index) {
+                      return Column(children: [
+                        CircularProfileAvatar(
+                          '',
+                          child: Image.asset("${topicList[index]['imagesrc']}",fit: BoxFit.cover, ), 
+                          // borderColor: Color(0xFFFF8F00),
+                          // borderWidth: 2,
+                          elevation: 5,
+                          radius: 40,
+                        ),
+                        Text("${topicList[index]['title']}",
+                            style: TextStyle(color: Colors.white)),
+                      ]);
+                    }),
                   ),
-                SizedBox(height: 10,),
-                Text("More Topics", style: TextStyle(color: Colors.orangeAccent, decoration: TextDecoration.underline,)),
-                SizedBox(height: 10,),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text("More Topics",
+                    style: TextStyle(
+                      color: Colors.deepOrange,
+                      decoration: TextDecoration.underline,
+                    )),
+                SizedBox(
+                  height: 10,
+                ),
                 new FlatButton(
-                            padding: EdgeInsets.symmetric(horizontal: 125),
-                            color: Color(0xFFFF8F00),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)
-                            ),
-                              onPressed: () {}, child: new Text('Apply'))
+                    padding: EdgeInsets.symmetric(horizontal: 125),
+                    color: Color(0xFFFF8F00),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    onPressed: () {},
+                    child: new Text('Apply'))
               ],
             ),
           ),

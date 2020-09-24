@@ -52,6 +52,7 @@ class CustomInput extends StatelessWidget {
               hintText: hint,
               hintStyle: TextStyle(color: Colors.white, fontSize: 12),
               border: new OutlineInputBorder(
+              //  borderSide: ,
                 borderRadius: const BorderRadius.all(
                   const Radius.circular(10.0),
                 ),
