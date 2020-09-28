@@ -77,7 +77,7 @@ class _CkOutPaymeState extends State<CkOutPayme> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -97,7 +97,7 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(left:30.0),
                   child: Row(
                     children: [
                       CircularProfileAvatar(
@@ -150,7 +150,7 @@ class _CkOutPaymeState extends State<CkOutPayme> {
                 ),
                 SizedBox(height: 10),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

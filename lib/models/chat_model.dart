@@ -66,7 +66,7 @@ class ChatModel {
       color: "Colors.purple",
       imageUrl: "assets/images/5.jpg",
       isTyping: true,
-      lastMessage: "i love being a developer it gives me ..",
+      lastMessage: "i love being a developer.",
       lastMessageTime: "3:00",
       people: PeopleModel(friend: "James fringe"),
       numberMess: "",

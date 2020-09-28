@@ -63,7 +63,7 @@ class _CartSummaryState extends State<CartSummary> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left:35.0),
               child: Row(
                 children: [
                   CircularProfileAvatar(
@@ -115,7 +115,7 @@ class _CartSummaryState extends State<CartSummary> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(25.0),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -128,21 +128,21 @@ class _CartSummaryState extends State<CartSummary> {
             ),
             SizedBox(height: 10),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(20.0),
               child: Text("Order Details",
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold)),
             ),
             SizedBox(height: 10),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(20.0),
               child: Text("Videos",
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold)),
             ),
             SizedBox(height: 10),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -160,7 +160,7 @@ class _CartSummaryState extends State<CartSummary> {
                           )),
                     ],
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 20),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -175,7 +175,7 @@ class _CartSummaryState extends State<CartSummary> {
                           ))
                     ],
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 20),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -190,7 +190,7 @@ class _CartSummaryState extends State<CartSummary> {
                           )),
                     ],
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 20),
                   Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -205,13 +205,13 @@ class _CartSummaryState extends State<CartSummary> {
                             ))
                       ]),
                   SizedBox(
-                    height: 12,
+                    height: 20,
                   ),
                   Text("Physical Products",
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold)),
                   SizedBox(
-                    height: 12,
+                    height: 20,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -227,7 +227,7 @@ class _CartSummaryState extends State<CartSummary> {
                           ))
                     ],
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -236,7 +236,7 @@ class _CartSummaryState extends State<CartSummary> {
                         child: Container(
                           height: 1.0,
                           width: 20.0,
-                          color: Colors.purpleAccent,
+                          color: Colors.grey,
                         ),
                       ),
                       Padding(
@@ -244,7 +244,7 @@ class _CartSummaryState extends State<CartSummary> {
                         child: Container(
                           height: 1.0,
                           width: 20.0,
-                          color: Colors.purpleAccent,
+                          color: Colors.grey,
                         ),
                       ),
                       Padding(
@@ -252,7 +252,7 @@ class _CartSummaryState extends State<CartSummary> {
                         child: Container(
                           height: 1.0,
                           width: 20.0,
-                          color: Colors.purpleAccent,
+                          color: Colors.grey,
                         ),
                       ),
                       Padding(
@@ -260,7 +260,7 @@ class _CartSummaryState extends State<CartSummary> {
                         child: Container(
                           height: 1.0,
                           width: 20.0,
-                          color: Colors.purpleAccent,
+                          color: Colors.grey,
                         ),
                       ),
                       Padding(
@@ -268,7 +268,7 @@ class _CartSummaryState extends State<CartSummary> {
                         child: Container(
                           height: 1.0,
                           width: 20.0,
-                          color: Colors.purpleAccent,
+                          color: Colors.grey,
                         ),
                       ),
                       Padding(
@@ -276,7 +276,7 @@ class _CartSummaryState extends State<CartSummary> {
                         child: Container(
                           height: 1.0,
                           width: 20.0,
-                          color: Colors.purpleAccent,
+                          color: Colors.grey,
                         ),
                       ),
                       Padding(
@@ -284,7 +284,7 @@ class _CartSummaryState extends State<CartSummary> {
                         child: Container(
                           height: 1.0,
                           width: 20.0,
-                          color: Colors.purpleAccent,
+                          color: Colors.grey,
                         ),
                       ),
                       Padding(
@@ -292,26 +292,29 @@ class _CartSummaryState extends State<CartSummary> {
                         child: Container(
                           height: 1.0,
                           width: 20.0,
-                          color: Colors.purpleAccent,
+                          color: Colors.grey,
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text("SubTotal ",
+                  SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("SubTotal ",
+                            style: TextStyle(
+                              color: Colors.white,
+                            )),
+                        Text(
+                          "N5,500.00",
                           style: TextStyle(
                             color: Colors.white,
-                          )),
-                      Text(
-                        "N5,500.00",
-                        style: TextStyle(
-                          color: Colors.white,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: 20,

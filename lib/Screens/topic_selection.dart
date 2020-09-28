@@ -45,6 +45,12 @@ class _TopicSelectionState extends State<TopicSelection> {
       "title": "sport",
     }
   ];
+
+  //  int _selectedIndex = 0;
+
+  // _onSelected(int index) {
+  //   setState(() => _selectedIndex = index);
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,7 +120,9 @@ class _TopicSelectionState extends State<TopicSelection> {
                   child: GridView.count(
                     crossAxisCount: 3,
                     children: List.generate(9, (index) {
-                      return Column(children: [
+                      return Column(
+                        
+                        children: [
                         CircularProfileAvatar(
                           '',
                           child: Image.asset("${topicList[index]['imagesrc']}",fit: BoxFit.cover, ), 

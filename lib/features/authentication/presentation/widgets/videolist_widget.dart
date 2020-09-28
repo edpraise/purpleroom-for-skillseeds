@@ -12,8 +12,8 @@ class VideoList extends StatelessWidget {
     return Row(
       children: [
         Container(
-            width: 150,
-            height:150,
+            width: 140,
+            height:200,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
@@ -21,12 +21,13 @@ class VideoList extends StatelessWidget {
             // padding: EdgeInsets.all(4),
             child: Center(
               child: Container(
-                width: 150,
-                height: 200,
+                width: 140,
+                height: 250,
                 decoration: BoxDecoration(
+                  // border: Bord,
                   color: Colors.white,
                   image: DecorationImage(
-                    fit: BoxFit.fill,
+                    fit: BoxFit.cover,
                     image: AssetImage(imageUrl, ),
                   ),
                   borderRadius: BorderRadius.circular(8),

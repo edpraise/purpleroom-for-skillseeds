@@ -310,7 +310,7 @@ class Peoplebelow extends StatelessWidget {
             radius: 25,
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(4.0),
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -322,7 +322,7 @@ class Peoplebelow extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 165,
+            width: 160,
           ),
           Icon(Icons.more_vert, color: Colors.grey),
         ],

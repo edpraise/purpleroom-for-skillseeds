@@ -32,6 +32,7 @@ dependencies:
   awesome_card: ^1.1.0
   font_awesome_flutter: ^8.8.1
   badges: ^1.1.1
+  carousel_slider: ^1.3.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -87,7 +88,11 @@ flutter:
     - assets/images/s.jpg
     - assets/images/sp.jpg
     - assets/images/mk.png
+    - assets/images/pls.jpg
     - assets/images/p.png
+    - assets/images/bx1.png
+    - assets/images/bx2.jpg
+    - assets/images/bx3.png
 
     # - images/a_dot_ham.jpeg
 

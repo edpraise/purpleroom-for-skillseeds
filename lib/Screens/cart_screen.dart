@@ -75,7 +75,7 @@ class _CartScreenState extends State<CartScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.all(12.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -95,8 +95,9 @@ class _CartScreenState extends State<CartScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(left:30.0),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CircularProfileAvatar(
                       '',
@@ -147,7 +148,7 @@ class _CartScreenState extends State<CartScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -164,7 +165,7 @@ class _CartScreenState extends State<CartScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(20.0),
                     child: Container(
                       height: 30,
                       width: 60,
@@ -215,7 +216,7 @@ class _CartScreenState extends State<CartScreen> {
                 height: 10,
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Text("Wallet Details",
                     style: TextStyle(color: Colors.white)),
               ),
@@ -227,7 +228,18 @@ class _CartScreenState extends State<CartScreen> {
                   width: 400,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(15),
+                   
+              gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: <Color>[
+                      Colors.white.withOpacity(0.7),
+                      Colors.blue,
+                      Colors.white
+                    ],
+                  ),
+          
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -236,14 +248,14 @@ class _CartScreenState extends State<CartScreen> {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           "ACCOUNT BALANCE",
-                          style: TextStyle(color: Colors.purple),
+                          style: TextStyle(color: Colors.black),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           "N105,000.00",
-                          style: TextStyle(color: Colors.purple),
+                          style: TextStyle(color: Colors.black),
                         ),
                       ),
                       Spacer(),
@@ -254,7 +266,7 @@ class _CartScreenState extends State<CartScreen> {
                           children: [
                             Text(
                               "Tranfer",
-                              style: TextStyle(color: Colors.purple),
+                              style: TextStyle(color: Colors.black),
                             ),
                             GestureDetector(
                               onTap: () {
@@ -262,7 +274,7 @@ class _CartScreenState extends State<CartScreen> {
                               },
                               child: Text(
                                 "Fund Account",
-                                style: TextStyle(color: Colors.purple),
+                                style: TextStyle(color: Colors.black),
                               ),
                             ),
                           ],

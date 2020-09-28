@@ -41,7 +41,7 @@ class _WalletConfirmationState extends State<WalletConfirmation> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -61,7 +61,7 @@ class _WalletConfirmationState extends State<WalletConfirmation> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(left:30.0),
             child: Row(
               children: [
                 CircularProfileAvatar(
@@ -111,7 +111,7 @@ class _WalletConfirmationState extends State<WalletConfirmation> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(25.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -131,7 +131,7 @@ class _WalletConfirmationState extends State<WalletConfirmation> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Image.asset(
-                  'assets/images/mk.jpg',
+                  'assets/images/pls.jpg',
                   fit: BoxFit.contain,
                 )),
           ),
