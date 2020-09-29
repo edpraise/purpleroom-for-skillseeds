@@ -15,7 +15,7 @@ class Review {
 
   static List<Review> list = [
     Review(
-      reviewMessage: 'khcihfiuahicinehfoascvbubviasc',
+      reviewMessage: 'khcihfiuahici',
       reviewerName: 'barns',
       messagetime: '2pm',
       reviewerPic: 'assets/images/1.jpg',
